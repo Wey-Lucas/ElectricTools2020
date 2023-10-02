@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{5460BF65-F0D8-48C3-8546-AEF778B83F4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ElectricTools2020</RootNamespace>
+    <AssemblyName>ElectricTools2020</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ElectricTools2020.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ElectricTools2020.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--AutoCAD References-->
+    <Reference Include="AcCoreMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDbMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="adoNetExtension">
+      <HintPath>..\..\..\..\..\..\DANIEL\Estudos\DTSIMP\DLLS\adoNetExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="AdWindows">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcWindows">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcTcMgd">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDx">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgdbrep">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcCui">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2020\Autodesk.AutoCAD.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.AutoCAD.Interop.Common, Version=23.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\Autodesk\AutoCAD 2020\Autodesk.AutoCAD.Interop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SPHEUpdate47">
+      <HintPath>..\..\..\..\..\..\DANIEL\Projetos\WINDOWS\SPHESysUpdate\Controles\SPHEUpdate47\bin\Debug\SPHEUpdate47.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <!--Map 3D References-->
+    <!--Civil 3D Refernces-->
+    <!--ACA References Begin-->
+    <!--ACA Refences End-->
+    <!--AME Referebces Begin-->
+    <!--AME Reference End-->
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>4.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ACAD_LINE.png" />
+    <Resource Include="Resources\ACAD_SPLINE.png" />
+    <Resource Include="Resources\ANCHOR\PNG_ASSOC.png" />
+    <Resource Include="Resources\ANCHOR\PNG_ASSOC2.png" />
+    <Resource Include="Resources\ANCHOR\PNG_BLOCKVERTEX.png" />
+    <Resource Include="Resources\ANCHOR\PNG_EXTANCHOR.png" />
+    <Resource Include="Resources\ANCHOR\PNG_GEOMETRICCENTER.png" />
+    <Resource Include="Resources\ANCHOR\PNG_INSANCHOR.png" />
+    <Resource Include="Resources\ANCHOR\PNG_INSERTIONPOINT.png" />
+    <Resource Include="Resources\ANCHOR\PNG_INTANCHOR.png" />
+    <Resource Include="Resources\ANCHOR\PNG_UNASSOC.png" />
+    <Resource Include="Resources\ANCHOR\PNG_UNASSOC2.png" />
+    <Resource Include="Resources\ANCHOR\PNG_USUANCHOR.png" />
+    <Resource Include="Resources\ANCHOR\PNG_VERTEXDATABASE.png" />
+    <Resource Include="Resources\CLEARASSIGN.png" />
+    <Resource Include="Resources\CLEARASSIGN1.png" />
+    <Resource Include="Resources\HT.png" />
+    <Resource Include="Resources\ICO_ASSOCIATION.ico" />
+    <Resource Include="Resources\ICO_ASSOCIATION2.ico" />
+    <Resource Include="Resources\ICO_MOVE_CENTRO.ico" />
+    <Resource Include="Resources\ICO_MOVE_FIM.ico" />
+    <Resource Include="Resources\ICO_MOVE_NENHUMA.ico" />
+    <Resource Include="Resources\ICO_MULTILINE.ico" />
+    <Resource Include="Resources\ICO_NO_OBLIQUE.ico" />
+    <Resource Include="Resources\ICO_OBLIQUE.ico" />
+    <Resource Include="Resources\ICO_SINGLELINE.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_45.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_90.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_ASSOCIATION.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_BREAK.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_CORNER.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_CURVE.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_DETECT.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_LINEAR.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVEFIRST.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVELAST.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVEUSER - Copia.png" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVEUSER.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_CENTER_HORIZONTAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_CENTER_VERTICAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_FIRST_HORIZONTAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_FIRST_VERTICAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_LAST_HORIZONTAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_MOVE_LAST_VERTICAL.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_ORIGEM_FIM.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_ORIGEM_INICIO.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_PROPERTIES.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_REVERSE.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_UPDATE.ico" />
+    <Resource Include="Resources\ICO_SMARTLINE_ZIGZAG.ico" />
+    <Resource Include="Resources\MATCHPROP.bmp" />
+    <Resource Include="Resources\ONOFF.png" />
+    <Resource Include="Resources\PNG-TEXT-STYLE.png" />
+    <Resource Include="Resources\PNG-TEXT.png" />
+    <Resource Include="Resources\PNG_ABRIR_PASTA.png" />
+    <Resource Include="Resources\PNG_ACAD_COLOR.png" />
+    <Resource Include="Resources\PNG_ACAD_LAYER.png" />
+    <Resource Include="Resources\PNG_ACAD_LINETYPE.png" />
+    <Resource Include="Resources\PNG_ACAD_LINEWEIGHT.png" />
+    <Resource Include="Resources\PNG_ADD.png" />
+    <Resource Include="Resources\PNG_ADICIONAR.png" />
+    <Resource Include="Resources\PNG_ADICIONAR_ITEM.png" />
+    <Resource Include="Resources\PNG_ADICIONAR_ITEM1.png" />
+    <Resource Include="Resources\PNG_ALIGN_BLOCK.png" />
+    <Resource Include="Resources\PNG_ANGLE.png" />
+    <Resource Include="Resources\PNG_ASSOCIATION.png" />
+    <Resource Include="Resources\PNG_ASSOCIATION2.png" />
+    <Resource Include="Resources\PNG_ASSOCMIRROR.png" />
+    <Resource Include="Resources\PNG_BC.png" />
+    <Resource Include="Resources\PNG_BL.png" />
+    <Resource Include="Resources\PNG_BLOCKCONFIG.png" />
+    <Resource Include="Resources\PNG_BLOCKMONITOR-GRANDE.png" />
+    <Resource Include="Resources\PNG_BLOCKMONITOR.png" />
+    <Resource Include="Resources\PNG_BLOCKMONITORCHECK.png" />
+    <Resource Include="Resources\PNG_BLOCKMONITORERASE.png" />
+    <Resource Include="Resources\PNG_BLOCKMONITORVIEW.png" />
+    <Resource Include="Resources\PNG_BR.png" />
+    <Resource Include="Resources\PNG_CALULADORA.png" />
+    <Resource Include="Resources\PNG_CHARMAP.png" />
+    <Resource Include="Resources\PNG_COLAPSEALL.png" />
+    <Resource Include="Resources\PNG_COPYCLEAR.bmp" />
+    <Resource Include="Resources\PNG_COPYCLEAR.png" />
+    <Resource Include="Resources\PNG_CORNERST.png" />
+    <Resource Include="Resources\PNG_CORNERST1.png" />
+    <Resource Include="Resources\PNG_CURVEST.png" />
+    <Resource Include="Resources\PNG_CURVEST1.png" />
+    <Resource Include="Resources\PNG_DIM_EXTERNAL.png" />
+    <Resource Include="Resources\PNG_DIM_INTERNAL.png" />
+    <Resource Include="Resources\PNG_DISTANCE.png" />
+    <Resource Include="Resources\PNG_EDIT.png" />
+    <Resource Include="Resources\PNG_EDITAR.png" />
+    <Resource Include="Resources\PNG_ENERGY.png" />
+    <Resource Include="Resources\PNG_ERRO.png" />
+    <Resource Include="Resources\PNG_EXCLAMATION.png" />
+    <Resource Include="Resources\PNG_EXPANDALL.png" />
+    <Resource Include="Resources\PNG_FECHAR.png" />
+    <Resource Include="Resources\PNG_FILTER.png" />
+    <Resource Include="Resources\PNG_FORMULA.png" />
+    <Resource Include="Resources\PNG_HELP.png" />
+    <Resource Include="Resources\PNG_IH.png" />
+    <Resource Include="Resources\PNG_IMPORT.png" />
+    <Resource Include="Resources\PNG_INDICATEMONITORING.png" />
+    <Resource Include="Resources\PNG_INDICATEMONITORINGUPDATE.png" />
+    <Resource Include="Resources\PNG_INFORMACAO.png" />
+    <Resource Include="Resources\PNG_INSERT.png" />
+    <Resource Include="Resources\PNG_INSERTHOLEDIRECTION.png" />
+    <Resource Include="Resources\PNG_INSERT_TEXT.png" />
+    <Resource Include="Resources\PNG_IV.png" />
+    <Resource Include="Resources\PNG_LOCALIZAR.png" />
+    <Resource Include="Resources\PNG_MATCHCORNER.png" />
+    <Resource Include="Resources\PNG_MIRROR_HORIZONTAL.png" />
+    <Resource Include="Resources\PNG_MIRROR_VERTICAL.png" />
+    <Resource Include="Resources\PNG_MOVEBREAK_HORIZONTAL.png" />
+    <Resource Include="Resources\PNG_MOVEBREAK_VERTICAL.png" />
+    <Resource Include="Resources\PNG_MOVE_CANTO.png" />
+    <Resource Include="Resources\PNG_MOVE_FIM.png" />
+    <Resource Include="Resources\PNG_MOVE_NENHUMA.png" />
+    <Resource Include="Resources\PNG_OBLIQUE.png" />
+    <Resource Include="Resources\PNG_OBLIQUE1.png" />
+    <Resource Include="Resources\PNG_OFF.png" />
+    <Resource Include="Resources\PNG_OFF1.png" />
+    <Resource Include="Resources\PNG_OK.png" />
+    <Resource Include="Resources\PNG_ON.png" />
+    <Resource Include="Resources\PNG_ON1.png" />
+    <Resource Include="Resources\PNG_PROCESSO.png" />
+    <Resource Include="Resources\PNG_R180.png" />
+    <Resource Include="Resources\PNG_R45D.png" />
+    <Resource Include="Resources\PNG_R45E.png" />
+    <Resource Include="Resources\PNG_R90D.png" />
+    <Resource Include="Resources\PNG_R90E.png" />
+    <Resource Include="Resources\PNG_RADIUS.png" />
+    <Resource Include="Resources\PNG_RADIUS1.png" />
+    <Resource Include="Resources\PNG_REMOVE.png" />
+    <Resource Include="Resources\PNG_REMOVER.png" />
+    <Resource Include="Resources\PNG_RESTORE.png" />
+    <Resource Include="Resources\PNG_ROTATE.png" />
+    <Resource Include="Resources\PNG_SALVAR.png" />
+    <Resource Include="Resources\PNG_SELECTOBJECT.png" />
+    <Resource Include="Resources\PNG_SELECTOBJECT1.png" />
+    <Resource Include="Resources\PNG_SELECTOBJECT_BLACK.png" />
+    <Resource Include="Resources\PNG_SLASSOC3.png" />
+    <Resource Include="Resources\PNG_SLASSOC3FIND.png" />
+    <Resource Include="Resources\PNG_SLASSOCMIRROR.png" />
+    <Resource Include="Resources\PNG_SLBLOCK.png" />
+    <Resource Include="Resources\PNG_SLBLOCKUPDATE.png" />
+    <Resource Include="Resources\PNG_SLBLOCKVERTEX.png" />
+    <Resource Include="Resources\PNG_SLBLOCKVERTEX1.png" />
+    <Resource Include="Resources\PNG_SLBZIGZAG.png" />
+    <Resource Include="Resources\PNG_SLCHECK.png" />
+    <Resource Include="Resources\PNG_SLCONBLKDIST - Copia.png" />
+    <Resource Include="Resources\PNG_SLCONBLKDIST.png" />
+    <Resource Include="Resources\PNG_SLCOPY.png" />
+    <Resource Include="Resources\PNG_SLCSEQUENCE.png" />
+    <Resource Include="Resources\PNG_SLDIVIDE.png" />
+    <Resource Include="Resources\PNG_SLINSERT.png" />
+    <Resource Include="Resources\PNG_SLJOIN.png" />
+    <Resource Include="Resources\PNG_SLJOIN1.png" />
+    <Resource Include="Resources\PNG_SLMATCHZIGZAG.png" />
+    <Resource Include="Resources\PNG_SLMIRROR.png" />
+    <Resource Include="Resources\PNG_SLOFFSET.png" />
+    <Resource Include="Resources\PNG_SLPROFILE.png" />
+    <Resource Include="Resources\PNG_SLROTATION.png" />
+    <Resource Include="Resources\PNG_SLROTATION1.png" />
+    <Resource Include="Resources\PNG_SLSHOW.png" />
+    <Resource Include="Resources\PNG_SLTARGET.png" />
+    <Resource Include="Resources\PNG_SLTARGET1.png" />
+    <Resource Include="Resources\PNG_SLTEXTEDIT.png" />
+    <Resource Include="Resources\PNG_SLUNASSOC3.png" />
+    <Resource Include="Resources\PNG_SLUNASSOCMIRROR.png" />
+    <Resource Include="Resources\PNG_SLWIPEOUT.png" />
+    <Resource Include="Resources\PNG_SLWIPEOUTCHECK.png" />
+    <Resource Include="Resources\PNG_SLWIPEOUTCHECK1.png" />
+    <Resource Include="Resources\PNG_SLWIPEOUTCLEAR.png" />
+    <Resource Include="Resources\PNG_SLWIPEOUTREVERSE.png" />
+    <Resource Include="Resources\PNG_SLZIGZAG.png" />
+    <Resource Include="Resources\PNG_SMARTLINE.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_ANCHOR.bmp" />
+    <Resource Include="Resources\PNG_SMARTLINE_ANCHOR.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_BREAK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_BREAK_BLOCK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_BREAK_BLOCK_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_BREAK_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CONVERT_BREAK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CONVERT_CORNER.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CONVERT_CURVE.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CONVERT_LINEAR.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CORNER.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CORNER_BLOCK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CORNER_BLOCK_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CORNER_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CURVE.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CURVE_BLOCK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CURVE_BLOCK_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_CURVE_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_DETECT.ico" />
+    <Resource Include="Resources\PNG_SMARTLINE_EDIT.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_EDIT_SMALL.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_ERROR.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR - Copia.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR_BLOCK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR_BLOCK_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR_OFFSET - Copia.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_LINEAR_OFFSET.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_MOVEBREAK.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_PROPERTIES.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_REVERSE.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_SMALL.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_VERTEX_DATABASE.png" />
+    <Resource Include="Resources\PNG_SMARTLINE_VERTEX_DATABASE1.png" />
+    <Resource Include="Resources\PNG_TC.png" />
+    <Resource Include="Resources\PNG_TEXTBOX.bmp" />
+    <Resource Include="Resources\PNG_TL.png" />
+    <Resource Include="Resources\PNG_TR.png" />
+    <Resource Include="Resources\PNG_UNASSOCIATION.png" />
+    <Resource Include="Resources\PNG_UNASSOCIATION2.png" />
+    <Resource Include="Resources\PNG_UNBLOCKMONITOR.png" />
+    <Resource Include="Resources\PNG_UNINDICATEMONITORING.png" />
+    <Resource Include="Resources\PNG_UNRESTORE.png" />
+    <Resource Include="Resources\PNG_UNSMARTLINE - Copia.png" />
+    <Resource Include="Resources\PNG_UNSMARTLINE.png" />
+    <Resource Include="Resources\PNG_UPROCESSO.png" />
+    <Resource Include="Resources\PNG_USER.png" />
+    <Resource Include="Resources\PNG_USER2.png" />
+    <Resource Include="Resources\PNG_USERS_BLACK.png" />
+    <Resource Include="Resources\PNG_USER_BLACK.png" />
+    <Resource Include="Resources\PNG_XREF.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_IH.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_IV.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_R180.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_R45D.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_R45E.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_R90D.png" />
+    <Resource Include="Resources\POSIÇÃO DE BLOCO\PNG_R90E.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-270-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-315-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-45-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-90-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-180-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-225-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-45-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-90-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_135-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-135-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-225-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-270-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-90-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-135-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-180-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-270-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-315-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_225-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-0-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-180-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-225-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-315-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-0-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-225-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-225.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-270-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-270.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-45-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_315-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-0-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-135-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-315-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-315.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-90-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_45-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-0-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-0.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-135-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-135.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-180-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-180.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-45-90.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90-45.png" />
+    <Resource Include="Resources\Vertex\BREAKS\BR_90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-270-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-315-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-45-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-90-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-180-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-225-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-45-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-90-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_135-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-135-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-225-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-270-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-90-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-135-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-180-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-270-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-315-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_225-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-0-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-180-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-225-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-315-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-0-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-225-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-270-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-45-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_315-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-0-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-135-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-315-225.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-315.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-90-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_45-90.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-0-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-135-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-135.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-180-270.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-180.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-45-0.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90-45.png" />
+    <Resource Include="Resources\Vertex\CORNERS\CO_90.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_0-270.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_0-315.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_0-45.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_0-90.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_0.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_135-180.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_135-90.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_180-135.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_180-225.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_180-270.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_180-90.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_180.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_225-180.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_225-270.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_270-0.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_270-180.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_270-225.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_270-315.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_270.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_315-0.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_315-270.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_45-0.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_45-90.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_90-0.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_90-135.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_90-180.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_90-45.png" />
+    <Resource Include="Resources\Vertex\CURVES\CU_90.png" />
+    <Resource Include="Resources\Vertex\LINES\LI_0.png" />
+    <Resource Include="Resources\Vertex\LINES\LI_180.png" />
+    <Resource Include="Resources\Vertex\ZIGZAG\ZG_0.png" />
+    <Resource Include="Resources\Vertex\ZIGZAG\ZG_180.png" />
+    <Resource Include="Resources\Vista %2820%29.png" />
+    <Resource Include="Resources\Vista %2820%291.png" />
+    <Resource Include="Resources\Vista %2822%29.png" />
+    <Resource Include="Resources\Word.bmp" />
+    <Resource Include="Resources\ZIGZAG\ZG_0.png" />
+    <Resource Include="Resources\ZIGZAG\ZG_180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\ctrElectricTools.Designer.vb">
+      <DependentUpon>ctrElectricTools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\ctrElectricTools.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\frmRegalConfigAddEdit.Designer.vb">
+      <DependentUpon>frmRegalConfigAddEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\frmRegalConfigAddEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\REGAL\Forms\frmRegalConfig.Designer.vb">
+      <DependentUpon>frmRegalConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\REGAL\Forms\frmRegalConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\REGAL\REGAL.vb" />
+    <Compile Include="Engine2\AcadContextMenu.vb" />
+    <Compile Include="Engine2\AcadExtensions.vb" />
+    <Compile Include="Engine2\AcadInterface.vb" />
+    <Compile Include="Engine2\AcadLayout.vb" />
+    <Compile Include="Engine2\AcadPrintManager.vb" />
+    <Compile Include="Engine2\AcadText.vb" />
+    <Compile Include="Engine2\AcadViewport.vb" />
+    <Compile Include="Engine2\AnnotationScale.vb" />
+    <Compile Include="Engine2\AutoLisp.vb" />
+    <Compile Include="Engine2\Block.vb" />
+    <Compile Include="Engine2\CadDialogs.vb" />
+    <Compile Include="Engine2\ChangeColor.vb" />
+    <Compile Include="Engine2\CircularProgressBar.vb" />
+    <Compile Include="Engine2\ClosePolyline.vb" />
+    <Compile Include="Engine2\CommandSlave.vb" />
+    <Compile Include="Engine2\ConvertionColors.vb" />
+    <Compile Include="Engine2\ConvertionUnits.vb" />
+    <Compile Include="Engine2\ConvertObject.vb" />
+    <Compile Include="Engine2\CurrentSpace.vb" />
+    <Compile Include="Engine2\CurrentUserAccess.vb" />
+    <Compile Include="Engine2\Debug.vb" />
+    <Compile Include="Engine2\DimStyle.vb" />
+    <Compile Include="Engine2\Drawing.vb" />
+    <Compile Include="Engine2\DrawPersistantVector.vb" />
+    <Compile Include="Engine2\DropDownColor.vb" />
+    <Compile Include="Engine2\DropDownImage.vb" />
+    <Compile Include="Engine2\DropDownLineWeight.vb" />
+    <Compile Include="Engine2\DropDownList.vb" />
+    <Compile Include="Engine2\Edit.vb" />
+    <Compile Include="Engine2\EngineTreeView.vb" />
+    <Compile Include="Engine2\EntityInteration.vb" />
+    <Compile Include="Engine2\Explode.vb" />
+    <Compile Include="Engine2\FileListBox.vb" />
+    <Compile Include="Engine2\FileSystemTreeView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engine2\FileThumbnail.vb" />
+    <Compile Include="Engine2\FindResources.vb" />
+    <Compile Include="Engine2\GeometricSequence.vb" />
+    <Compile Include="Engine2\Geometry.vb" />
+    <Compile Include="Engine2\Hatch.vb" />
+    <Compile Include="Engine2\Jigger.vb" />
+    <Compile Include="Engine2\KeyPress.vb" />
+    <Compile Include="Engine2\Layer.vb" />
+    <Compile Include="Engine2\LineStyle.vb" />
+    <Compile Include="Engine2\LineThumbnail.vb" />
+    <Compile Include="Engine2\MeasureString.vb" />
+    <Compile Include="Engine2\MyGripOverrule.vb" />
+    <Compile Include="Engine2\MyPaletteSet.vb" />
+    <Compile Include="Engine2\NetLoad.vb" />
+    <Compile Include="Engine2\Prompt.vb" />
+    <Compile Include="Engine2\Properties.vb" />
+    <Compile Include="Engine2\Reactors\ChangedProcessEventArgs.vb" />
+    <Compile Include="Engine2\Reactors\ClonedProcessEventArgs.vb" />
+    <Compile Include="Engine2\Reactors\ErasedProcessEventArgs.vb" />
+    <Compile Include="Engine2\Reactors\ExplodedProcessEventArgs.vb" />
+    <Compile Include="Engine2\Reactors\ProcessBase.vb" />
+    <Compile Include="Engine2\Reactors\Reactor.vb" />
+    <Compile Include="Engine2\Reactors\Reactors.vb" />
+    <Compile Include="Engine2\Reactors\RestrictProcessEventArgs.vb" />
+    <Compile Include="Engine2\Reactors\VetoCommand.vb" />
+    <Compile Include="Engine2\Regedit.vb" />
+    <Compile Include="Engine2\SelectEntityInBlockPlane.vb" />
+    <Compile Include="Engine2\Serialize.vb" />
+    <Compile Include="Engine2\StartApp.vb" />
+    <Compile Include="Engine2\SystemMemory.vb" />
+    <Compile Include="Engine2\SystemVariables.vb" />
+    <Compile Include="Engine2\TextStyle.vb" />
+    <Compile Include="Engine2\ToolTipMonitor.vb" />
+    <Compile Include="Engine2\TopMostMessageBox.vb" />
+    <Compile Include="Engine2\UCS.vb" />
+    <Compile Include="Engine2\XClip.vb" />
+    <Compile Include="Engine2\XData.vb" />
+    <Compile Include="Engine2\XRecord.vb" />
+    <Compile Include="Engine2\XRef.vb" />
+    <Compile Include="Engine2\Zoom.vb" />
+    <Compile Include="Engine2\[Notify].vb" />
+    <Compile Include="Commands\ELECTRICTOOLS\ELECTRICALTOOLS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ELECTRICALTOOLS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaskList.Designer.vb">
+      <DependentUpon>frmTaskList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTaskList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myPlugin.vb" />
+    <Compile Include="Commands\ELECTRICTOOLS\ELECTRICALTOOLS.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.vb" />
+    <Compile Include="Support\CallCommand.vb" />
+    <Compile Include="Support\Lic.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commands\ELECTRICTOOLS\Controls\ctrElectricTools.resx">
+      <DependentUpon>ctrElectricTools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commands\ELECTRICTOOLS\Controls\frmRegalConfigAddEdit.resx">
+      <DependentUpon>frmRegalConfigAddEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commands\REGAL\Forms\frmRegalConfig.resx">
+      <DependentUpon>frmRegalConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTaskList.resx">
+      <DependentUpon>frmTaskList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ElectricTools2020.Commands.ELECTRICTOOLS.resources" />
+    <EmbeddedResource Include="obj\Debug\ElectricTools2020.ctrElectricTools.resources" />
+    <EmbeddedResource Include="obj\Debug\ElectricTools2020.frmTaskList.resources" />
+    <EmbeddedResource Include="obj\Debug\ElectricTools2020.g.resources" />
+    <EmbeddedResource Include="obj\Debug\ElectricTools2020.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commands\ELECTRICTOOLS\ELECTRICALTOOLS.resx">
+      <DependentUpon>ELECTRICALTOOLS.vb</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ELECTRICALTOOLS.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\AutoCAD VB plug-in1.vbproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ElectricTools2020.vbproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\ElectricTools2020.vbproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\ElectricTools2020.vbproj.GenerateResource.cache" />
+    <None Include="Resources\LUZ.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ALERTMINI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TaskLeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\adoNetExtension.dll" />
+    <Content Include="bin\Debug\ElectricTools2020.dll" />
+    <Content Include="bin\Debug\ElectricTools2020.pdb" />
+    <Content Include="bin\Debug\SPHEUpdate47.dll" />
+    <Content Include="bin\Debug\SPHEUpdate47.pdb" />
+    <None Include="Resources\PNG_ACAD_SELECT_OBJECT.png" />
+    <None Include="Resources\Navegadores\ULTIMO.png" />
+    <None Include="Resources\Navegadores\SALVAR.png" />
+    <None Include="Resources\Navegadores\REMOVER2.png" />
+    <None Include="Resources\Navegadores\REMOVER.png" />
+    <None Include="Resources\Navegadores\PROXIMO.png" />
+    <None Include="Resources\Navegadores\PRIMEIRO.png" />
+    <None Include="Resources\Navegadores\LOCALIZAR2.png" />
+    <None Include="Resources\Navegadores\LOCALIZAR.png" />
+    <None Include="Resources\Navegadores\EDITAR2.png" />
+    <None Include="Resources\Navegadores\EDITAR.png" />
+    <None Include="Resources\Navegadores\CANCELAR.png" />
+    <None Include="Resources\Navegadores\ANTERIOR.png" />
+    <None Include="Resources\Navegadores\ADICIONAR2.png" />
+    <None Include="Resources\Navegadores\ADICIONAR.png" />
+    <Resource Include="obj\Debug\ElectricTools2020.vbproj.FileListAbsolute.txt" />
+    <Resource Include="bin\Debug\SPHEUpdate47.xml" />
+    <Content Include="obj\Debug\TempPE\Commands.ELECTRICALTOOLS.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\Commands.ELECTRICTOOLS.ELECTRICALTOOLS.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\My Project.Application.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\Debug\TempPE\myCommands.Designer.vb.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
