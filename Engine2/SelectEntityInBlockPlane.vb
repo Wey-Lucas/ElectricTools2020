@@ -28,6 +28,12 @@ Namespace Engine2
         Public Event SelectionFilter(Entity As Entity, ByRef IsValid As Boolean, CurrentTransaction As Transaction)
 
         ''' <summary>
+        ''' Determina que não foram encontrados itens válidos
+        ''' </summary>
+        ''' <param name="sender"></param>
+        Public Event NotValidate(sender As SelectEntityInBlockPlane)
+
+        ''' <summary>
         ''' Abre o modo de seleção que permite selecionar entidades internas a um bloco
         ''' </summary>
         ''' <param name="BlockReference"></param>
@@ -59,6 +65,8 @@ Namespace Engine2
             Dim ProgressMeter As ProgressMeter = Nothing
             Dim IdCollection As System.Collections.Generic.IEnumerable(Of ObjectId)
             Dim ini As Integer = 0
+            Dim OnValidate As Boolean = False
+
             'Bloqueia o documento
             Using Editor.Document.LockDocument
 
@@ -98,7 +106,7 @@ Namespace Engine2
                         ProgressMeter.Start("Analisando o " & If(IsXref = True, "XRef", "bloco") & ", aguarde...")
 
                         'Percorre a coleção de entidades do bloco
-                        For Each ObjectId0 In IdCollection 'BlockTableRecord
+                        For Each ObjectId0 In IdCollection
 
                             Try
 
@@ -134,6 +142,9 @@ Namespace Engine2
 
                                         'Adiciona o clone na coleção
                                         Clones.Add(Clone)
+
+                                        'Seta que houve item válido
+                                        OnValidate = True
 
                                     End If
 
@@ -299,6 +310,11 @@ Namespace Engine2
                         'Destroi o temporizador
                         If IsNothing(ProgressMeter) = False Then
                             ProgressMeter.Dispose()
+                        End If
+
+                        'Avalia se houve itens válidos
+                        If OnValidate = False Then
+                            RaiseEvent NotValidate(Me)
                         End If
 
                     End Try

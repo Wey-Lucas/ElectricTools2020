@@ -38,9 +38,9 @@ Partial Class frmRegalConfigAddEdit
         Me.lblBlockName.AutoSize = True
         Me.lblBlockName.Location = New System.Drawing.Point(12, 9)
         Me.lblBlockName.Name = "lblBlockName"
-        Me.lblBlockName.Size = New System.Drawing.Size(82, 13)
+        Me.lblBlockName.Size = New System.Drawing.Size(117, 13)
         Me.lblBlockName.TabIndex = 0
-        Me.lblBlockName.Text = "Nome do bloco:"
+        Me.lblBlockName.Text = "Nome do bloco MODE:"
         '
         'txtScaleXP
         '
@@ -77,7 +77,7 @@ Partial Class frmRegalConfigAddEdit
         'cmdCancel
         '
         Me.cmdCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdCancel.Location = New System.Drawing.Point(216, 148)
+        Me.cmdCancel.Location = New System.Drawing.Point(200, 148)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(75, 23)
         Me.cmdCancel.TabIndex = 7
@@ -87,7 +87,7 @@ Partial Class frmRegalConfigAddEdit
         'cmdOK
         '
         Me.cmdOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdOK.Location = New System.Drawing.Point(297, 148)
+        Me.cmdOK.Location = New System.Drawing.Point(281, 148)
         Me.cmdOK.Name = "cmdOK"
         Me.cmdOK.Size = New System.Drawing.Size(75, 23)
         Me.cmdOK.TabIndex = 8
@@ -111,7 +111,7 @@ Partial Class frmRegalConfigAddEdit
         Me.cmbBlockName.FormattingEnabled = True
         Me.cmbBlockName.Location = New System.Drawing.Point(15, 28)
         Me.cmbBlockName.Name = "cmbBlockName"
-        Me.cmbBlockName.Size = New System.Drawing.Size(357, 21)
+        Me.cmbBlockName.Size = New System.Drawing.Size(341, 21)
         Me.cmbBlockName.TabIndex = 1
         '
         'frmRegalConfigAddEdit

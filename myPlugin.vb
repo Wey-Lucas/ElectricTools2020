@@ -143,6 +143,20 @@ Namespace ElectricTools
             End Set
         End Property
 
+        ''' <summary>
+        ''' Retorna o nome ou parte do nome do bloco alimentador (REGAL)
+        ''' </summary>
+        ''' <returns></returns>
+        Public Shared Property RegalBlockNameAlim As String
+            Get
+                Return SystemMemory.GetValue("RegalBlockNameAlim")
+            End Get
+            Set(value As String)
+                _SystemMemory.SetValue("RegalBlockNameAlim", value)
+            End Set
+        End Property
+
+
         Public Sub New()
 
             'SPHESysUpdate
@@ -156,7 +170,7 @@ Namespace ElectricTools
             With _SystemMemory
 
                 'Teste
-                .AddValue("Teste", "0", Microsoft.Win32.RegistryValueKind.String)
+                .AddValue("RegalBlockNameAlim", "SPHE-EFO-ALIM-*", Microsoft.Win32.RegistryValueKind.String)
 
             End With
 

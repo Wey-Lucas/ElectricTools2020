@@ -22,7 +22,7 @@ Public Class frmRegalConfigAddEdit
         If IsNothing(RegalConfigAddEditResult) = True Then
             Me.cmdOK.Text = "Adicionar"
             Me.cmbBlockName.Text = ""
-            Me.txtScaleXP.Text = "0.50"
+            Me.txtScaleXP.Text = "0.05"
             Me.txtLines.Text = "10"
             Me.chkAtivo.Checked = True
         Else

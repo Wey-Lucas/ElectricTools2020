@@ -580,6 +580,12 @@
     <Compile Include="Commands\ELECTRICTOOLS\Controls\ctrElectricTools.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\frmRegalComplementAddEdit.Designer.vb">
+      <DependentUpon>frmRegalComplementAddEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\ELECTRICTOOLS\Controls\frmRegalComplementAddEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Commands\ELECTRICTOOLS\Controls\frmRegalConfigAddEdit.Designer.vb">
       <DependentUpon>frmRegalConfigAddEdit.vb</DependentUpon>
     </Compile>
@@ -706,6 +712,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Commands\ELECTRICTOOLS\Controls\ctrElectricTools.resx">
       <DependentUpon>ctrElectricTools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commands\ELECTRICTOOLS\Controls\frmRegalComplementAddEdit.resx">
+      <DependentUpon>frmRegalComplementAddEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Commands\ELECTRICTOOLS\Controls\frmRegalConfigAddEdit.resx">
       <DependentUpon>frmRegalConfigAddEdit.vb</DependentUpon>
